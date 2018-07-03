@@ -30,7 +30,6 @@ function downloadBackupFromS3 {
   s3Key="${S3_ACCESS_KEY_ID}"
   s3Secret="${S3_SECRET_ACCESS_KEY}"
   signature=`/bin/echo -en "$stringToSign" | openssl sha1 -hmac ${s3Secret} -binary | base64`
-  echo `/bin/echo -en "$stringToSign" | openssl sha1 -hmac ${s3Secret}`
   curl -H "Host: ${bucket}.s3.amazonaws.com" \
   -H "Date: ${dateValue}" \
   -H "Content-Type: ${contentType}" \
