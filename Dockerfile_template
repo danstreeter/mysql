@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM mysql:${SOURCE_MYSQL_VERSION}
 
 RUN apt-get update && apt-get install -y curl
 

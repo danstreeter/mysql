@@ -1,3 +1,10 @@
+
+# This is a child docker image of the official mysql repo with a few extra features
+
+For information on how to use this image please see the official mysql repo duplicated below for your reference
+
+
+
 # https://github.com/docker-library/mysql
 
 ## Maintained by: [the Docker Community and the MySQL Team](https://github.com/docker-library/mysql)
