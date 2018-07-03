@@ -35,7 +35,7 @@ function downloadBackupFromS3 {
   -H "Date: ${dateValue}" \
   -H "Content-Type: ${contentType}" \
   -H "Authorization: AWS ${s3Key}:${signature}" \
-  https://${bucket}.s3.amazonaws.com/${file} | gunzip | mysql -u "$MYSQL_USER" -p "$MYSQL_PASSWORD" -D "$MYSQL_DATABASE"
+  https://${bucket}.s3.amazonaws.com/${file} | gunzip | "${mysql[@]}"
 }
 
 shouldS3 || (echo "Not downloading from S3" & exit 0)
