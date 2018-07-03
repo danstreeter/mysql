@@ -8,5 +8,5 @@ ENV S3_BUCKET **None**
 ENV S3_ENDPOINT **None**
 ENV S3_FILE_PATH **None**
 
-COPY flowmoco-entrypoint.sh /docker-entrypoint-initdb.d/
+COPY flowmoco-init.sh /docker-entrypoint-initdb.d/
 
