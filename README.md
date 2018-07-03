@@ -3,6 +3,14 @@
 
 For information on how to use this image please see the official mysql repo duplicated below for your reference
 
+## Additional Environment Variables
+This container supports automatic downloading of the most recent backup of the database for this project.  You can use the following variables to make this happen from S3.
+* `S3_ACCESS_KEY_ID` your AWS access key *required*
+* `S3_SECRET_ACCESS_KEY` your AWS secret key *required*
+* `S3_BUCKET` your AWS S3 bucket path *required*
+* `S3_FILE_PATH` The path to the backup file to download and recover
+All of the above need to be entered in order for a backup task to run.  See log for details.
+
 
 
 # https://github.com/docker-library/mysql
